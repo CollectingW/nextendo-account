@@ -46,10 +46,9 @@ func gameStatsURLs() []string {
 		env("DASH_ACNH_URL", "http://acnhnex-nexgo:8086"),
 		// ARMS's titlesByAccessKey entry (b6b34c51) was added without this: the mapping
 		// existed but nothing ever polled ARMS's /api/stats, so it could never actually be
-		// matched -- caught in review 2026-08-16. Default guessed from the mk8nex/s2nex
-		// naming pattern and ARMS's confirmed dashboard port (8091); override with the real
-		// internal hostname via DASH_ARMS_URL if this guess is wrong.
-		env("DASH_ARMS_URL", "http://armsnex:8091"),
+		// matched -- caught in review 2026-08-16. Container is just "arms", confirmed by
+		// Kazu (matches what they already run in production, not a guess anymore).
+		env("DASH_ARMS_URL", "http://arms:8091"),
 	}
 }
 
