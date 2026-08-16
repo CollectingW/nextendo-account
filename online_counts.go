@@ -26,6 +26,7 @@ var titlesByAccessKey = map[string][]string{
 	"4eb18d39": {"0100f8f0000a2000", "01003bc0000a0000", "01003c700009c800"}, // Splatoon 2 (EU/US/JP)
 	"9587602b": {"01006a800016e000"},                                         // Super Smash Bros. Ultimate
 	"v43a10em": {"01006f8002326000"},                                         // Animal Crossing: New Horizons
+	"fdf6617f": {"01009b90006dc000"},                                         // Super Mario Maker 2
 }
 
 const onlineCountsTTL = 5 * time.Second
