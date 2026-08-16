@@ -44,6 +44,12 @@ func gameStatsURLs() []string {
 		env("DASH_S2_URL", "http://s2nex:8083"),
 		env("DASH_SSBU_URL", "http://ssbusecure:8084"),
 		env("DASH_ACNH_URL", "http://acnhnex-nexgo:8086"),
+		// ARMS's titlesByAccessKey entry (b6b34c51) was added without this: the mapping
+		// existed but nothing ever polled ARMS's /api/stats, so it could never actually be
+		// matched -- caught in review 2026-08-16. Default guessed from the mk8nex/s2nex
+		// naming pattern and ARMS's confirmed dashboard port (8091); override with the real
+		// internal hostname via DASH_ARMS_URL if this guess is wrong.
+		env("DASH_ARMS_URL", "http://armsnex:8091"),
 	}
 }
 
